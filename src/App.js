@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Clock from './components/Clock';
+
+/*function Wellcome(props) {
+    return <>
+        <p>
+            Привет,  {props.name}
+        </p>
+    </>;
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [value, setValue] = useState();
+//value ? value.target.value : 
+    return <>
+        <Wellcome name={value ? value.target.value : ''}/>
+        <input type={'text'} onChange={setValue}/>
+    </>;
+
+    //toLocateTimeString
+}*/
+
+function App() {
+    // const timer = function() {
+    //     // {new Date().toDateString()}
+    //     // {new Date().toLocaleDateString()}
+    //     return;
+    // };
+
+    return <>
+        <Clock date={new Date()}/>
+    </>;
 }
 
 export default App;
